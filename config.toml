@@ -1,8 +1,8 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
-theme = "slim"
+baseURL = "https://czabania.com"
+languageCode = "en-nz"
+title = "George Czabania"
 publishDir = "docs"
+theme = "slim"
 
 [params]
   Subtitle = "Your site's subtitle/tagline"
