@@ -1,0 +1,16 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "My New Hugo Site"
+theme = "slim"
+publishDir = "docs"
+
+[params]
+  Subtitle = "Your site's subtitle/tagline"
+  GithubID = "stayradiated"
+  TwitterID = "stayradiated"
+  # AnalyticsID = "Your Google Analytics tracking code"
+  DisqusShortname = "Your Disqus shortname"
+  Summary = true  # takes true or false
+  Content = false  # takes true or false
+  # if both are set to true, summary is shown.
+  # FooterMsg = "Copyright Me 2016. Powered by Hugo."
