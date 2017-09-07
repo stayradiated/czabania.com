@@ -1,4 +1,4 @@
-baseURL = "https://czabania.com"
+baseURL = "https://czabania.com/"
 languageCode = "en-nz"
 title = "George Czabania"
 publishDir = "docs"
