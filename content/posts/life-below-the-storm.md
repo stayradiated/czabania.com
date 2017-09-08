@@ -4,6 +4,8 @@ date: 2017-09-07T09:08:19+12:00
 type: "post"
 ---
 
+![](/img/life-below-the-storm.jpg)
+
 I woke up a cold this morning - and went out for a walk listening to my 'Sick
 Days' mixtape I made the last time I had a cold. I decided to make a new
 mixtape for when I was feeling under the weather. It's mainly based around some
@@ -11,7 +13,7 @@ artists I have been listening to a lot lately.
 
 *Spotify Playlist:*
 
-<iframe src="https://open.spotify.com/embed?uri=spotify:user:stayradiated:playlist:5N1HWW4ewaqVZkAB2U4Utj&theme=white" width="672" height="380" frameborder="0" allowtransparency="true"></iframe>
+<iframe src="https://open.spotify.com/embed?uri=spotify:user:stayradiated:playlist:5N1HWW4ewaqVZkAB2U4Utj&theme=white" style="margin: 1em" width="640" height="380" frameborder="0" allowtransparency="true"></iframe>
 
 *Cassette List:*
 
