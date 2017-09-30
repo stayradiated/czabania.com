@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://george.czabania.com/posts/mixtape-a-midnight-bolt-of-electricity/</loc>
+    <lastmod>2017-09-30T17:39:55+13:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://george.czabania.com/posts/mixtape-charles-bradley-and-soul/</loc>
     <lastmod>2017-09-20T22:12:29+12:00</lastmod>
   </url>
@@ -34,13 +39,13 @@
   
   <url>
     <loc>https://george.czabania.com/</loc>
-    <lastmod>2017-09-20T22:12:29+12:00</lastmod>
+    <lastmod>2017-09-30T17:39:55+13:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://george.czabania.com/posts/</loc>
-    <lastmod>2017-09-20T22:12:29+12:00</lastmod>
+    <lastmod>2017-09-30T17:39:55+13:00</lastmod>
     <priority>0</priority>
   </url>
   
