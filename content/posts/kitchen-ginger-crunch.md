@@ -1,0 +1,18 @@
+---
+title: "Kitchen: Ginger Crunch"
+date: 2017-10-01T17:34:31+13:00
+type: "post"
+---
+
+<iframe width="640" height="480" src="https://www.youtube.com/embed/1TYwR7Ewlug" frameborder="0" allowfullscreen></iframe>
+
+This was a late night cooking experiment. Originally I wanted to make some
+bagels - but I didn't have enough flour. A friend suggested I make this Ginger
+Crunch recipe instead - and it turned out pretty well.
+
+Recipe: https://albrown.co.nz/cook/sweet-stuff/ginger-crunch
+
+The video was originally published on my Snapchat story.
+
+
+
