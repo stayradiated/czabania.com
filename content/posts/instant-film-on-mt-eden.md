@@ -1,7 +1,6 @@
 ---
 title: "Instant Film: Mt. Eden"
 date: 2017-09-09T14:07:47+12:00
-type: "post"
 ---
 
 One of my goals for 2017 is to take an instant film photograph every single

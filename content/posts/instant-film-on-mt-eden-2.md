@@ -1,7 +1,6 @@
 ---
 title: "Instant Film: Mt. Eden 2"
 date: 2017-09-13T20:32:31+12:00
-type: "post"
 ---
 
 I've had a cold for the last couple of days and have been stuck inside with

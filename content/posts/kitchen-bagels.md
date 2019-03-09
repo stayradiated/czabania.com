@@ -1,7 +1,6 @@
 ---
 title: "Kitchen: Bagels"
 date: 2017-10-15T13:55:23+13:00
-type: "post"
 ---
 
 ![](/img/kitchen_bagels_3517.jpg)

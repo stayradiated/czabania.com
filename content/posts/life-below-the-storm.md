@@ -1,7 +1,6 @@
 ---
 title: "Mixtape: Life Below The Storm"
 date: 2017-09-07T09:08:19+12:00
-type: "post"
 ---
 
 ![](/img/life-below-the-storm.jpg)

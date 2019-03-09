@@ -1,7 +1,6 @@
 ---
 title: "Sony TC-161SD Cassette Deck Repair"
 date: 2017-09-12T20:48:48+12:00
-type: "post"
 ---
 
 ![](/img/sony-tc-161sd-3.jpg)

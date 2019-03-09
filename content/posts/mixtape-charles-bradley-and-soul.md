@@ -1,7 +1,6 @@
 ---
 title: "Mixtape: Charles Bradley and Soul"
 date: 2017-09-20T22:12:29+12:00
-type: "post"
 ---
 
 ![](/img/mixtape-charles-bradley-and-soul.jpg)

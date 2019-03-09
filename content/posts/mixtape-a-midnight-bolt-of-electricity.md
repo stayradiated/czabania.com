@@ -1,7 +1,6 @@
 ---
 title: "Mixtape: A Midnight Bolt Of Electricity"
 date: 2017-09-30T17:39:55+13:00
-type: "post"
 ---
 
 ![](/img/mixtape-a-midnight-bolt-of-electricity.jpg)
