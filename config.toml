@@ -1,4 +1,4 @@
-baseURL = "https://george.czabaina.com/"
+baseURL = "https://george.czabania.com/"
 languageCode = "en-nz"
 paginate = 5
 publishDir = "docs"
