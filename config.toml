@@ -14,7 +14,7 @@ title = "George Czabania"
 [languages]
   [languages.en]
     title = "george.czabania"
-    subtitle = "A simple, retro theme for Hugo"
+    subtitle = ""
     keywords = ""
     copyright = ""
     menuMore = "Show more"
