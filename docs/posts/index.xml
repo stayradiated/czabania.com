@@ -6,13 +6,24 @@
     <description>Recent content in Posts on george.czabania</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-nz</language>
-    <lastBuildDate>Tue, 12 Mar 2019 08:24:28 +1300</lastBuildDate>
+    <lastBuildDate>Wed, 13 Mar 2019 09:07:20 +1300</lastBuildDate>
     
 	<atom:link href="https://george.czabania.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Wikis and Public Transport</title>
+      <title>Stir Fry and Wikis Day #2</title>
+      <link>https://george.czabania.com/posts/2019_03_12/</link>
+      <pubDate>Wed, 13 Mar 2019 09:07:20 +1300</pubDate>
+      
+      <guid>https://george.czabania.com/posts/2019_03_12/</guid>
+      <description>Song: Alfie Templeman - Like an Animal.
+Walking to the office  This morning at work I continued setting up Gitbook, and migrated all our existing content from Confluence. This was pretty easy with this Confluence to Markdown tool.
+The feedback so far has been pretty positive about using Gitbook, and I am keen to get everyone using it as our main wiki. The trouble is it is quite difficult to change something as core as a wiki - it affects everyone in the team.</description>
+    </item>
+    
+    <item>
+      <title>Wiki&#39;s and Public Transport</title>
       <link>https://george.czabania.com/posts/2019_03_11/</link>
       <pubDate>Tue, 12 Mar 2019 08:24:28 +1300</pubDate>
       
