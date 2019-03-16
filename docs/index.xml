@@ -6,10 +6,21 @@
     <description>Recent content on george.czabania</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-nz</language>
-    <lastBuildDate>Fri, 15 Mar 2019 08:07:08 +1300</lastBuildDate>
+    <lastBuildDate>Sat, 16 Mar 2019 22:13:16 +1300</lastBuildDate>
     
 	<atom:link href="https://george.czabania.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Git Guru</title>
+      <link>https://george.czabania.com/posts/2019_03_16/</link>
+      <pubDate>Sat, 16 Mar 2019 22:13:16 +1300</pubDate>
+      
+      <guid>https://george.czabania.com/posts/2019_03_16/</guid>
+      <description>Yesterday I started a new project.
+Quick background:
+ At Mish Guru we use Github to manage our code. When a developer wants to submit a change, such as adding a feature or fixing a bug, they create a Pull Request (PR). This PR has a title, description of why the change was made and a list of all the files that were edited. Before the PR can be accepted, it must first be reviewed by at least one other member of the team.</description>
+    </item>
     
     <item>
       <title>Washing Machines</title>
