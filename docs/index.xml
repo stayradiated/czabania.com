@@ -6,10 +6,20 @@
     <description>Recent content on george.czabania</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-nz</language>
-    <lastBuildDate>Fri, 22 Mar 2019 08:56:40 +1300</lastBuildDate>
+    <lastBuildDate>Sat, 23 Mar 2019 23:38:19 +1300</lastBuildDate>
     
 	<atom:link href="https://george.czabania.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>selfupdate</title>
+      <link>https://george.czabania.com/posts/2019_03_23/</link>
+      <pubDate>Sat, 23 Mar 2019 23:38:19 +1300</pubDate>
+      
+      <guid>https://george.czabania.com/posts/2019_03_23/</guid>
+      <description>On Friday morning I updated one of my favourite libraries: selfupdate. It&amp;rsquo;s open source, and you can find the code at https://github.com/mishguruorg/selfupdate
+At Mish, I started this project for use with our &amp;lsquo;autologin&amp;rsquo; devices. These are Raspberry Pi&amp;rsquo;s we have scattered around the world that run a Node.js script. Before &amp;ldquo;selfupdate&amp;rdquo; was a thing, managing this fleet of Pi&amp;rsquo;s was a pain. To install updates, we would have to manually SSH into each device and run the update script.</description>
+    </item>
     
     <item>
       <title>One Wok Noodle Stir Fry</title>
