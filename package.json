@@ -1,0 +1,67 @@
+{
+  "name": "gatsby-starter-mdx-website-blog",
+  "private": true,
+  "description": "A starter website and blog powered by Gatsby and Markdown with MDX",
+  "version": "0.1.0",
+  "author": "Doak Heggeness <doakheggeness@gmail.com>",
+  "dependencies": {
+    "@emotion/core": "^10.0.22",
+    "@emotion/styled": "^10.0.23",
+    "@mdx-js/mdx": "^1.5.2",
+    "@mdx-js/react": "^1.5.2",
+    "@mdx-js/tag": "^0.20.3",
+    "gatsby": "^2.18.12",
+    "gatsby-image": "^2.2.36",
+    "gatsby-plugin-emotion": "^4.1.18",
+    "gatsby-plugin-feed-mdx": "^1.0.0",
+    "gatsby-plugin-google-analytics": "^2.1.31",
+    "gatsby-plugin-manifest": "^2.2.33",
+    "gatsby-plugin-mdx": "^1.0.62",
+    "gatsby-plugin-offline": "^3.0.29",
+    "gatsby-plugin-react-helmet": "^3.1.18",
+    "gatsby-plugin-sharp": "^2.3.8",
+    "gatsby-plugin-sitemap": "^2.2.24",
+    "gatsby-remark-copy-linked-files": "^2.1.33",
+    "gatsby-remark-images": "^3.1.38",
+    "gatsby-remark-prismjs": "^3.3.27",
+    "gatsby-remark-responsive-iframe": "^2.2.30",
+    "gatsby-remark-smartypants": "^2.1.19",
+    "gatsby-source-filesystem": "^2.1.42",
+    "gatsby-transformer-remark": "^2.6.42",
+    "gatsby-transformer-sharp": "^2.3.9",
+    "mdx-utils": "^0.2.0",
+    "prismjs": "^1.17.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "typeface-merriweather": "0.0.72",
+    "typeface-source-sans-pro": "0.0.75"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-plugin-react": "^7.17.0",
+    "gh-pages": "2.1.1",
+    "prettier": "^1.19.1"
+  },
+  "homepage": "https://gatsby-starter-mdx-website-blog.netlify.com/",
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doakheggeness/gatsby-starter-mdx-website-blog.git"
+  },
+  "scripts": {
+    "dev": "gatsby develop",
+    "tidy": "eslint --ext .js,.jsx --ignore-pattern public .",
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "deploy": "gatsby build && gh-pages -d public"
+  }
+}
