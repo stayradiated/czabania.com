@@ -33,8 +33,6 @@ class BlogPostTemplate extends React.Component {
       return <div>Loading...</div>
     }
 
-    console.log(post.frontmatter)
-
     return (
       <BlogLayout
         location={this.props.location}

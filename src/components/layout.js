@@ -10,7 +10,6 @@ import '../styles/global.css'
 
 const Layout = (props) => {
   const { className, children } = props
-  console.log(props)
   return (
     <>
       <div className="siteContainer">
