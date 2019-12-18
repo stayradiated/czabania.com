@@ -89,9 +89,9 @@ class BinaryTreeNode<Value> {
 We can use it like this:
 
 ```typescript
-const Hannah = new BinaryTreeNode<String>('Hannah')
-const Thomas = new BinaryTreeNode<String>('Thomas')
-const Emily = new BinaryTreeNode<String>('Emily', Hannah, Thomas)
+const Hannah = new BinaryTreeNode<string>('Hannah')
+const Thomas = new BinaryTreeNode<string>('Thomas')
+const Emily = new BinaryTreeNode<string>('Emily', Hannah, Thomas)
 ```
 
 [![Visualization of the binary tree](./graph_2.png)](https://edotor.net/#digraph%20%7B%0A%20%20node%5Bshape%3Degg%5D%0A%0A%20%20f6%20%5Blabel%3D%22Hannah%22%5D%0A%20%20f7%20%5Blabel%3D%22Emily%22%5D%0A%0A%20%20m6%20%5Blabel%3D%22Thomas%22%5D%0A%0A%20%20%7Bm6%20f6%7D%20-%3E%20f7%0A%7D%0A)
@@ -287,7 +287,7 @@ nodes are locked.
 
 
 ```typescript
-public toString(leftpad = 0): String {
+public toString(leftpad = 0): string {
   const padding = new Array(leftpad).fill(' ').join('')
   // highlight-next-line
   const output = [`${this.value}${this.isLocked() ? '🔒' : ''}`]
