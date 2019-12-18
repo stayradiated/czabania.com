@@ -73,7 +73,7 @@ class Index extends React.Component {
           const title = node.frontmatter.title || node.fields.slug
           return (
             <Article key={node.fields.slug}>
-              <Meta date={node.frontmatter.date} />
+              <Meta tag={node.frontmatter.tag} date={node.frontmatter.date} />
               <h3>
                 <Link to={node.fields.slug}>
                   {title}
@@ -110,6 +110,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
+            tag
             date(formatString: "Do MMMM YYYY")
             title
             thumbnail {

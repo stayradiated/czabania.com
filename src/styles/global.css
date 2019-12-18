@@ -181,17 +181,11 @@ a:hover {
   text-decoration: underline;
 }
 
-code, kbd {
+kbd {
   background: #efefef;
   color: #000000;
   padding: 5px;
   border-radius: 6px;
-}
-
-pre > code {
-  padding: 10px;
-  display: block;
-  overflow-x: auto;
 }
 
 img {
@@ -239,4 +233,14 @@ tbody tr:nth-child(even) {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #c4c4c4;
+}
+
+.gatsby-highlight-code-line {
+  background-color: #feb;
+  display: block;
+  margin-right: -1em;
+  margin-left: -1em;
+  padding-right: 1em;
+  padding-left: 0.75em;
+  border-left: 0.25em solid #f99;
 }

@@ -29,13 +29,22 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.mdx
     const { previous, next } = this.props.pageContext
 
+    if (post == null) {
+      return <div>Loading...</div>
+    }
+
+    console.log(post.frontmatter)
+
     return (
       <BlogLayout
         location={this.props.location}
       >
         <SEO title={post.frontmatter.title} description={post.excerpt} />
 
-        <Meta date={post.frontmatter.date} />
+        <Meta
+          tag={post.frontmatter.tag} 
+          date={post.frontmatter.date} 
+        />
 
         <Content>
           <Title>{post.frontmatter.title}</Title>
@@ -94,6 +103,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        tag
       }
       body
     }

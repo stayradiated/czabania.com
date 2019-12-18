@@ -2,26 +2,45 @@ import styled from '@emotion/styled'
 import { PropTypes } from 'prop-types'
 
 const MetaGroup = styled('small')`
+  display: flex;
+  justify-content: space-between;
+
   margin: 0 0 0.5em;
   border-top: 1px solid rgba(0, 0, 0, 0.06);
-  display: block;
   background: rgba(0, 0, 0, 0.03);
-  text-align: right;
-  padding-right: 20px;
+  padding: 0 20px;
   font-size: 10px;
   line-height: 15px;
   color: #6F6F6F;
 `
 
+const Tag = styled('div')`
+  flex: 1;
+  text-align: left;
+
+  &:before {
+    content: '#'
+  }
+`
+
+const Date = styled('div')`
+  flex: 1;
+  text-align: right;
+`
+
 const Meta = (props) => {
-  const { date } = props
+  const { tag, date } = props
 
   return (
-    <MetaGroup>{date}</MetaGroup>
+    <MetaGroup>
+      {tag && <Tag>{tag}</Tag>}
+      <Date>{date}</Date>
+    </MetaGroup>
   )
 }
 
 Meta.propTypes = {
+  tag: PropTypes.string,
   date: PropTypes.string.isRequired,
 }
 
