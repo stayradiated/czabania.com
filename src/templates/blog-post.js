@@ -22,6 +22,12 @@ const Title = styled('h1')`
 
 const Content = styled('div')`
   margin: 0 1rem;
+
+
+  video {
+    width: 100%;
+    border-radius: 4px;
+  }
 `
 
 class BlogPostTemplate extends React.Component {
