@@ -283,6 +283,27 @@ gatsbyRemarkPlugins.push({
 })
 
 /*
+ * [Markdown] Video
+ * https://www.npmjs.com/package/gatsby-remark-video
+ *
+ * Processes images in markdown so they can be used in the production build.
+ */
+
+gatsbyRemarkPlugins.push({
+  resolve: 'gatsby-remark-video',
+  options: {
+    width: 'auto',
+    height: 'auto',
+    preload: 'auto',
+    muted: true,
+    autoplay: true,
+    playsinline: true,
+    controls: false,
+    loop: true
+  }
+})
+
+/*
  * [Markdown] Responsive iFrames
  * https://www.npmjs.com/package/gatsby-remark-responsive-iframe
  *
