@@ -1,0 +1,20 @@
+---
+title: Turbine & Google Cloud PubSub
+tag: turbine
+date: 2019-12-24T22:45:11+13:00
+---
+
+I am thinking about deploying a few projects onto the Google Cloud. These
+projects will be built on microservices and use
+[Turbine](https://github.com/stayradiated/turbine) to communicate with each
+other.
+
+Turbine currently supports RabbitMQ and SQS/SNS queues, but it's surprisingly
+easy to write a driver for most queues. Google recommends that services use
+their own Google Cloud PubSub service, so I spent the afternoon learning how it
+worked and wrote a driver for it.
+
+You can check out [the code on
+GitHub](https://github.com/stayradiated/turbine/blob/master/packages/turbine-driver-google-cloud-pubsub/src/index.ts)
+and install it [from
+NPM](https://npmjs.com/package/@stayradiated/turbine-driver-google-cloud-run).
