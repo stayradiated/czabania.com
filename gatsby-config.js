@@ -33,6 +33,7 @@ plugins.push(
     options: {
       path: `${__dirname}/content/blog`,
       name: 'blog',
+      ignore: process.env.NODE_ENV === 'production' && ['**/__*']
     },
   },
   {
