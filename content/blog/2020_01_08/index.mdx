@@ -1,0 +1,41 @@
+---
+title: util.debuglog
+date: 2020-01-08T15:14:30+13:00
+---
+
+Today I wanted to add debug logs to the turbine project. This means that when a
+certain environment flag is set, extra info is printed to the console to aid
+debugging.
+
+I have previously used the `debug` package for this, but I was wondering what
+other options.
+
+I searched the internet for "debug log sindresorhus" and came across his repo:
+https://github.com/sindresorhus/debug-log - which happens to be deprecated, but alerted me to the existence of `util.debuglog`.
+
+The builtin `util` package has a bunch of great functions in it, like
+`promisify` and `inspect` -- and also the method `debuglog`.
+
+You can read the official Node.js docs for it here: https://nodejs.org/api/util.html#util_util_debuglog_section
+
+```javascript
+// index.js
+const { debuglog } = require('util')
+
+const log = debuglog('myapp')
+
+log('doing the thing')
+```
+
+If you run the app normally, nothing is printed:
+
+```shell
+node ./index.js
+```
+
+But if you set the `NODE_DEBUG` flag to `myapp` then we see the log message!
+
+```shell
+NODE_DEBUG=myapp node./index.js
+MYAPP 735650: doing the thing
+```
