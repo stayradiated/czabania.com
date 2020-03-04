@@ -1,0 +1,276 @@
+---
+tag: dailycodingproblem
+title: Summing Contiguous Lists in Prolog
+date: 2020-03-05T09:54:02+13:00
+---
+
+The past couple weeks, I have been trying to wrap my head around Prolog. Prolog
+is a logic programming langauge, that uses a declaritive style instead of
+imperative - similar to SQL, you describe the rules of a program instead of
+step-by-step instructions.
+
+[The website of Markus Triska](https://www.metalevel.at) has been a fantastic
+  resource in understanding Prolog. He also has a YouTube channel I highly
+  recommend: [The Power of
+    Prolog](https://www.youtube.com/channel/UCFFeNyzCEQDS4KCecugmotg).
+
+## Daily Coding Problem
+
+Today's [Daily Coding Problem](https://www.dailycodingproblem.com/) is:
+
+> Given a list of integers and a number `K`, return which contiguous elements of
+> the list sum to `K`.
+>
+> For example, if the list is `[1, 2, 3, 4, 5]` and `K` is 9, then it should
+> return `[2, 3, 4]`, since `2 + 3 + 4 = 9`.
+
+This was the first ever problem I successfully solved on my own with Prolog,
+and I'm quite proud of it. The following a walkthrough of how I solved it,
+and an introduction to Prolog.
+
+## The Solution
+
+There are many different implementations of Prolog. I am using the free and
+open source [SWI-Prolog](https://www.swi-prolog.org). They also have an online
+playground you can use: https://swish.swi-prolog.org/.
+
+> Note: in the following code snippets, lines starting with `?-` are queries
+typed into the Prolog REPL. 
+
+Prolog has builtin support for reasoning about lists, and has two very useful
+predicates I will be using today: `sum_list` and `append`.
+
+### `sum_list(List, Sum)`
+
+Predicates are kind of like functions, but instead of returning an output
+value, the output value is one of the arguments. 
+
+We can use this to verify if an array of numbers sums to a particular value:
+
+```prolog
+% does 1 + 2 + 3 = 6?
+?- sum_list([1, 2, 3], 6).
+true.
+
+% does an empty list have a sum of 0?
+?- sum_list([], 0).
+true.
+
+% does 2 + 2 = 5?
+?- sum_list([2, 2], 5).
+false.
+```
+
+As you might expect, we can also use this to _calculate_ the sum of a list:
+
+```prolog
+% what is 10 + 11 + 12?
+?- sum_list([10, 11, 12], X).
+X = 33.
+```
+
+### `append(List1, List2, List1And2)`
+
+The `append` predicate can be used to combine two lists together.
+
+We can test if two lists concatenate to a single list:
+
+```prolog
+% does [1] + [2] = [1, 2, 3]?
+?- append([1], [2], [1, 2]).
+true.
+
+% does [4] + [5, 6] = [4, 5, 6, 7]?
+?- append([4], [5, 6], [4, 5, 6, 7]).
+false.
+```
+
+We can also find the concatenation of two lists:
+
+```prolog
+% what is the result of [1, 2, 3] + [4, 5]?
+?- append([1, 2, 3], [4, 5], X).
+X = [1, 2, 3, 4, 5].
+```
+
+Prolog also has this amazing ability to run certain predicates in reverse. This
+means we can find a input that makes the statement true.
+
+```prolog
+% solve [1, 2, 3] + X = [1, 2, 3, 4, 5]
+?- append([1, 2, 3], X, [1, 2, 3, 4, 5]).
+X = [4, 5].
+```
+
+If we don't care about the value of `X`, we can use an underscore instead.
+This allows us to use the `append` function to test if a list is the prefix
+of another:
+
+```prolog
+% does this list start with 9?
+?- append([9], _, [1, 2, 3, 4, 5]).
+false.
+
+% does this list start with [1, 2, 3]?
+?- append([1, 2, 3], _, [1, 2, 3, 4, 5]).
+true.
+```
+
+Likewise, by switching the first two arguments, we can check if a list is a
+suffix of another:
+
+```prolog
+% does this list end with [9]?
+?- append(_, [9], [1, 2, 3, 4, 5]).
+false.
+
+% does this list end with [4, 5]?
+?- append(_, [4, 5], [1, 2, 3, 4, 5]).
+true.
+```
+
+## Contains
+
+For todays problem, we need a way to test if a given list is contained within
+another list. Prolog does not provide a predicate for this, so we need to write
+our own.
+
+I am going to call the predicate `contains(ParentList, ChildList)`, and it will
+be true if `ParentList` contains all the elements of `ChildList`, and those
+elements are contiguous and in the same order.
+
+For example, the list `[1, 2, 3, 4, 5]` contains `[2, 3, 4]` but does not
+contain `[1, 3, 5]` or `[4, 3, 2]`.
+
+My first attempt at this predicate was to use the `append` function:
+
+```prolog
+contains(ParentList, ChildList) :-      % ":-" means "is true if"
+  append(ChildList, _, ParentList);     % ";"  means OR
+  append(_, ChildList, ParentList).
+```
+
+Let's try it out for cases we know to be true:
+  
+```prolog
+% elements at the start of the list
+?- contains([1, 2, 3, 4, 5], [1, 2, 3]).
+true .
+
+% elements at the end of the list
+?- contains([1, 2, 3, 4, 5], [4, 5]).
+true .
+```
+
+And for cases we know to be false
+
+```prolog
+% elements must be directly next to each other
+?- contains([1, 2, 3, 4, 5], [1, 3, 5]).
+false.
+
+% elements must be in the correct order
+?- contains([1, 2, 3, 4, 5], [4, 3, 2]).
+false.
+```
+
+Looking good! However... it doesn't handle elements in the middle of a list:
+
+```prolog
+?- contains([1, 2, 3, 4, 5], [3, 4]).
+false.
+```
+
+Our `contains` predicate is too narrow - it requires that the `ChildList` must
+be at the immediate start or end of the `ParentList`. We are going to need an
+alternative method.
+
+### Contains, attempt v2
+
+A better way to write the `contains` predicate, would be to start start by
+checking if the `ChildList` is the prefix of the `ParentList`.  If it isn't, we
+should slice off the first item of the ParentList and try again until we find a
+match.
+
+```prolog
+?- append([3, 4], _, [1, 2, 3, 4, 5]).
+false.
+
+?- append([3, 4], _, [2, 3, 4, 5]).
+false.
+
+?- append([3, 4], _, [3, 4, 5]).
+true.
+```
+
+This can be written in Prolog like so:
+
+```prolog
+contains(ParentList, ChildList) :-
+  % does ParentList begin with ChildList?
+  append(ChildList, _, ParentList); 
+  % if not, slice off the first element of ParentList
+  [_ | ParentListTail] = ParentList,
+  % and try again with the rest of the list
+  contains(ParentListTail, ChildList).
+```
+
+The line `[_ | ParentListTail] = ParentList` is similar to destructuring in
+other languages. The first item in the `ParentList` is discarded, and the tail
+is assigned to the variable `ParentListTail`.
+
+This is a now a recursive predicate, and works as we would expect:
+
+```prolog
+?- contains([1, 2, 3, 4, 5], [3, 4]).
+true .
+```
+
+We can also do cool stuff, like find the value of the child elements:
+
+```prolog
+?- contains([1, 2, 3, 4, 5], [2, X, 4]).
+X = 3 .
+
+?- contains([X, 2, 3, 4, 5], [1, 2, 3]).
+X = 3 .
+```
+
+### Contiguous Sum
+
+Now that we have a working `contains` predicate, it's pretty easy to write a
+predicate that can find a child list that sums to a given number.
+
+```prolog
+contiguous_sum(ParentList, Sum, ChildList) :-
+  contains(ParentList, ChildList),
+  sum_list(ChildList, Sum).
+```
+
+Let's try it out:
+
+```prolog
+?- contiguous_sum([1, 2, 3, 4, 5], 9, X).
+X = [2, 3, 4] ;
+X = [4, 5] ;
+false.
+```
+
+Awesome! It not only finds the first answer `[2, 3, 4]` but also a second: `[4, 5]`.
+
+### Final Program
+
+```prolog
+contains(ParentList, ChildList) :-
+  append(ChildList, _, ParentList);
+  [_ | NextParentList] = ParentList,
+  contains(NextParentList, ChildList).
+
+contiguous_sum(ParentList, Sum, ChildList) :-
+  contains(ParentList, ChildList),
+  sum_list(ChildList, Sum).
+```
+
+I think Prolog is an powerful language - you can do a lot with a little code.
+The tricky bit is figuring out how to describe a problem in logical rules
+instead of imperative instructions.
