@@ -98,6 +98,9 @@ plugins.push({
     extensions: ['.mdx', '.md'],
     defaultLayouts: require.resolve('./src/components/layout.js'),
     gatsbyRemarkPlugins,
+    rehypePlugins: [
+      require('rehype-slug'),
+    ],
     plugins: [
       'gatsby-remark-images' // this remark plugin is special
     ],
