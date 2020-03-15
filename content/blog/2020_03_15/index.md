@@ -1,5 +1,5 @@
 ---
-title: Arduino Nano with Linux
+title: Programming an old Arduino Nano on Linux (without the IDE)
 date: 2020-03-15T14:36:49+13:00
 thumbnail: ./arduino.jpg
 ---
