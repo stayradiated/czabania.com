@@ -290,14 +290,14 @@ gatsbyRemarkPlugins.push({
  * [Markdown] Video
  * https://www.npmjs.com/package/gatsby-remark-video
  *
- * Processes images in markdown so they can be used in the production build.
+ * Embeds video tag in your gatsby project
  */
 
 gatsbyRemarkPlugins.push({
   resolve: 'gatsby-remark-video',
   options: {
     width: 'auto',
-    height: 'auto',
+    height: 500,
     preload: 'auto',
     muted: true,
     autoplay: true,
