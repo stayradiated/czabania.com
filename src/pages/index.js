@@ -8,44 +8,44 @@ import SEO from '../components/seo'
 import Meta from '../components/meta'
 
 const Bio = styled('div')`
-margin: 0 1rem 0.5em;
+  margin: 0 1rem 0.5em;
 
-h2 {
-  margin: 0;
-}
+  h2 {
+    margin: 0;
+  }
 `
 
 const Article = styled('article')`
-margin: 0 0 0.5em;
-padding-bottom: 0.5rem;
+  margin: 0 0 0.5em;
+  padding-bottom: 0.5rem;
 
-h3 {
-  margin: 0 1rem 0.5em;
-  margin-bottom: .5rem;
-  text-align: left;
-}
-
-h3 a {
-  color: #686DE0;
-  padding: 0 0.125rem;
-  transition: all 150ms linear;
-  text-decoration: none;
-  &:focus,
-  &:active,
-  &:hover {
-    color: #380f6b;
-    text-decoration: underline;
+  h3 {
+    margin: 0 1rem 0.5em;
+    margin-bottom: 0.5rem;
+    text-align: left;
   }
-}
 
-.image {
-  margin: 1rem;
-  border-radius: 4px;
-}
+  h3 a {
+    color: #686de0;
+    padding: 0 0.125rem;
+    transition: all 150ms linear;
+    text-decoration: none;
+    &:focus,
+    &:active,
+    &:hover {
+      color: #380f6b;
+      text-decoration: underline;
+    }
+  }
 
-p {
-  margin: 0 1rem;
-}
+  .image {
+    margin: 1rem;
+    border-radius: 4px;
+  }
+
+  p {
+    margin: 0 1rem;
+  }
 `
 
 class Index extends React.Component {
@@ -75,18 +75,15 @@ class Index extends React.Component {
             <Article key={node.fields.slug}>
               <Meta tag={node.frontmatter.tag} date={node.frontmatter.date} />
               <h3>
-                <Link to={node.fields.slug}>
-                  {title}
-                </Link>
+                <Link to={node.fields.slug}>{title}</Link>
               </h3>
-              {node.frontmatter.thumbnail && 
-                <Img 
-                  className='image'
+              {node.frontmatter.thumbnail && (
+                <Img
+                  className="image"
                   fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
-                />}
-              <p
-                dangerouslySetInnerHTML={{ __html: node.excerpt }}
-              />
+                />
+              )}
+              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
             </Article>
           )
         })}
@@ -115,7 +112,7 @@ export const pageQuery = graphql`
             title
             thumbnail {
               childImageSharp {
-                fluid(maxWidth: 840, maxHeight: 180, cropFocus: CENTER) {
+                fluid(maxWidth: 768, maxHeight: 128, cropFocus: CENTER) {
                   ...GatsbyImageSharpFluid
                 }
               }

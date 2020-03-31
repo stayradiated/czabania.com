@@ -17,9 +17,9 @@ const Layout = (props) => {
           <title>george.czabania</title>
         </Helmet>
 
-        <SiteHeader siteTitle='george.czabania' />
+        <SiteHeader siteTitle="george.czabania" />
 
-        <div className='siteContent'>
+        <div className="siteContent">
           <main className={className}>{children}</main>
         </div>
 

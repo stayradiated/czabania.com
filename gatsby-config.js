@@ -159,20 +159,6 @@ plugins.push({
 })
 
 /*
- * [Plugin] Google Analytics
- * https://www.npmjs.com/package/gatsby-plugin-sitemap
- *
- * Easily add Google Analytics to your Gatsby site.
- */
-
-plugins.push({
-  resolve: 'gatsby-plugin-google-analytics',
-  options: {
-    //trackingId: 'ADD YOUR TRACKING ID HERE',
-  },
-})
-
-/*
  * [Plugin] Feed
  * https://www.npmjs.com/package/gatsby-plugin-feed-mdx
  *
@@ -294,16 +280,18 @@ gatsbyRemarkPlugins.push({
  */
 
 gatsbyRemarkPlugins.push({
-  resolve: 'gatsby-remark-video',
+  resolve: '@stayradiated/gatsby-remark-video',
   options: {
-    width: 'auto',
-    height: 500,
-    preload: 'auto',
-    muted: true,
-    autoplay: true,
-    playsinline: true,
-    controls: false,
-    loop: true
+    defaultAttributes: {
+      width: 'auto',
+      height: 432,
+      preload: 'auto',
+      muted: true,
+      autoplay: true,
+      playsinline: true,
+      controls: false,
+      loop: true
+    }
   }
 })
 

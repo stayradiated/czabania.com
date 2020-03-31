@@ -17,17 +17,11 @@ const BlogLayout = styled(Layout)`
 `
 
 const Title = styled('h1')`
-  color: #686DE0;
+  color: #686de0;
 `
 
 const Content = styled('div')`
   margin: 0 1rem;
-
-
-  video {
-    width: 100%;
-    border-radius: 4px;
-  }
 `
 
 class BlogPostTemplate extends React.Component {
@@ -40,15 +34,10 @@ class BlogPostTemplate extends React.Component {
     }
 
     return (
-      <BlogLayout
-        location={this.props.location}
-      >
+      <BlogLayout location={this.props.location}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
 
-        <Meta
-          tag={post.frontmatter.tag} 
-          date={post.frontmatter.date} 
-        />
+        <Meta tag={post.frontmatter.tag} date={post.frontmatter.date} />
 
         <Content>
           <Title>{post.frontmatter.title}</Title>

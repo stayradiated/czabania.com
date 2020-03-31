@@ -6,7 +6,7 @@ import styled from '@emotion/styled'
 const StyledHeader = styled('header')`
   width: 100%;
   margin-bottom: 1rem;
-  border-bottom: 1px solid #EEE;
+  border-bottom: 1px solid #eee;
 `
 
 const Nav = styled('nav')`
@@ -23,7 +23,7 @@ const Nav = styled('nav')`
 
   li {
     display: inline;
-    margin: 0 0.5em 0 0;
+    margin: 0 0 0 1.5em;
 
     &:first-of-type {
       position: relative;
@@ -31,14 +31,14 @@ const Nav = styled('nav')`
       flex-basis: 100%;
 
       a {
-        color: #BBB;
+        color: #bbb;
       }
     }
   }
 
   a {
     text-decoration: none;
-    color: #CCC;
+    color: #ccc;
     font-weight: 600;
     transition: all 0.2s;
 
@@ -49,9 +49,8 @@ const Nav = styled('nav')`
 `
 
 const activeLinkStyle = {
-  textDecoration: 'underline'
+  textDecoration: 'underline',
 }
-
 
 const SiteHeader = (props) => {
   const { siteTitle } = props
@@ -61,25 +60,22 @@ const SiteHeader = (props) => {
       <Nav>
         <ul>
           <li>
-            <Link to="/">
-              {siteTitle}
-            </Link>
+            <Link to="/">{siteTitle}</Link>
           </li>
-          {/* <li> */}
-          {/*   <Link to="/about/" activeStyle={activeLinkStyle}> */}
-          {/*     about */}
-          {/*   </Link> */}
-          {/* </li> */}
           <li>
-            <a href="https://github.com/stayradiated">
-              github
-            </a>
+            <a href="https://hire.george.czabania.com">résumé</a>
+          </li>
+          <li>
+            <a href="https://github.com/stayradiated">github</a>
+          </li>
+          <li>
+            <a href="https://contact.george.czabania.com">feedback</a>
           </li>
         </ul>
       </Nav>
     </StyledHeader>
   )
- }
+}
 
 SiteHeader.propTypes = {
   siteTitle: PropTypes.string,

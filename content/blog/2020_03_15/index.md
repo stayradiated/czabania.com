@@ -69,8 +69,8 @@ $ arduino-cli compile --fqbn arduino:avr:nano blink
 ```
 
 The final step is to send the compiled code to the arduino. The trick here is
-to know the FQBN.  When I tried using just `arduino:avr:nano` it would not
-work.  For my arduino nano clone, I had to add `cpu=atmega328old`, so that it
+to know the FQBN. When I tried using just `arduino:avr:nano` it would not
+work. For my arduino nano clone, I had to add `cpu=atmega328old`, so that it
 uses the old bootloader.
 
 ```

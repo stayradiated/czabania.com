@@ -11,7 +11,7 @@ const MetaGroup = styled('small')`
   padding: 0 20px;
   font-size: 10px;
   line-height: 15px;
-  color: #6F6F6F;
+  color: #6f6f6f;
 `
 
 const Tag = styled('div')`
@@ -19,7 +19,7 @@ const Tag = styled('div')`
   text-align: left;
 
   &:before {
-    content: '#'
+    content: '#';
   }
 `
 
